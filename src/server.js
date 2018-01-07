@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 // routes
 const postickRoute = require('./routes/postick');
-app.use(postickRoute);
+app.use('/api', postickRoute);
 
 app.listen(app.get('port'), () => {
   console.log('Listening on http://localhost:3000/')
