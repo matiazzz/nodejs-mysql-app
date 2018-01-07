@@ -1,11 +1,7 @@
 const mysql = require('mysql');
+const dbconfig = require('../config/mysql-config');
 
-connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'postickdb'
-});
+connection = mysql.createConnection(dbconfig);
 
 let postickModel = {};
 
